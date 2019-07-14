@@ -75,12 +75,16 @@ p {
         box-shadow: 4px 5px 4px 1px #4e4e4e;
         transition: all 0.3s ease-in-out;
         flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         
         &:hover, &:focus {
             background-color: #9b4d4d;
             color: #f3f3f5;
             box-shadow: none;
             outline: none;
+            text-decoration: none;
         }
         @media screen and (max-width: 992px) {
             font-size: 0.8rem;

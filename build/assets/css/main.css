@@ -1360,6 +1360,15 @@ p {
     transition: all 0.3s ease-in-out;
     -ms-flex-negative: 0;
     flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .button:hover, .button:focus {
@@ -1368,6 +1377,7 @@ p {
     -webkit-box-shadow: none;
     box-shadow: none;
     outline: none;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 992px) {

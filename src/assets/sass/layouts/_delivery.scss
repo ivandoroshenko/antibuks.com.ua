@@ -1,0 +1,20 @@
+.delivery {
+   @extend .aux_section;
+}
+
+.delivery_title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: 991px) {
+        font-size: 2.5rem;
+    }
+
+     @media screen and (max-width: 624px) {
+        font-size: 2rem;
+    }
+}
+
+.delivery_list {
+    @extend .aux_list;
+}

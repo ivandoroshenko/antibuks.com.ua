@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+// Центрирующий контейнер под медиа запросы параметры менять в mixin
+// .container {  
+//     width: 1200px;
+// } 
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #000;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// delete margin end padding h:
+
+h1, h2, h3, h4, h5, h6 {   
+    margin: 0;
+    padding: 0;
+} 
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.ml-md-auto {
+  margin-left: auto;
+}
+
+.mr-md-auto {
+  margin-right: auto;
+}
+
+    .button {
+        background-color: #fae79a;
+        color: #2e5d5d;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 4px 5px 4px 1px #4e4e4e;
+        transition: all 0.3s ease-in-out;
+        flex-shrink: 0;
+        
+        &:hover, &:focus {
+            background-color: #9b4d4d;
+            color: #f3f3f5;
+            box-shadow: none;
+            outline: none;
+        }
+        @media screen and (max-width: 992px) {
+            font-size: 0.8rem;
+            padding: 10px 15px;
+        }
+        span {
+            @media screen and (max-width: 475px) {
+                display: none;
+            }
+        } 
+        
+    }
+
+      .title {
+        font-size: 6rem;
+        font-family: Impact, Charcoal, sans-serif;
+        font-weight: 900;
+        letter-spacing: 5px;
+        color: #e31f26;
+        text-shadow:
+        -1px -1px #fff,
+        1px -1px #fff,
+        -1px 1px #fff,
+        1px 1px #fff;
+        margin: 0;
+        padding: 0;
+        line-height: 1; 
+        
+         @media screen and (max-width: 1200px) {
+            font-size: 4rem;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 3rem;
+        }
+        @media screen and (max-width: 625px) {
+            font-size: 2.5rem;
+        }
+        
+    }
+
+    // for main sections on auxiliary pages
+    .aux_section {
+    background: #eeeae9;
+    padding: 30px 0;
+    }
+    
+    .aux_text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    text-align: justify;
+
+    &:first-letter {
+        margin-left: 15px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    strong {
+        font-size: 1.2rem;
+    }
+}
+
+.aux_list {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        position: relative;
+        padding-left: 40px;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url(../../assets/img/check-solid.svg) center center no-repeat;
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

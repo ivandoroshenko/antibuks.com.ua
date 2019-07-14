@@ -1,0 +1,267 @@
+
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    .top-bar {
+        width: 100%;
+        background: rgb(142,138,138);
+        background: linear-gradient(90deg, rgba(142,138,138,1) 0%, rgba(46,93,93,1) 100%); 
+        padding: 15px 30px;
+        transition: all 0.3s;
+
+         @media screen and (max-width: 768px) {
+            padding: 15px 0;
+        }
+         @media screen and (max-width: 475px) {
+            padding: 10px 0;
+        }
+        
+
+        .row {
+            @media screen and (max-width: 992px) {
+                justify-content: flex-start;
+            }
+            @media screen and (max-width: 768px) {
+                padding-left: 15px;
+            }
+        }
+    
+
+
+    .nav {
+        display: flex;
+
+        @media screen and (max-width: 992px) {
+            position: relative;
+            position: absolute;
+            right: 60px;
+        }
+
+    }
+
+    .nav_list {
+        display: flex;
+        list-style-type: none;
+        flex-flow: row wrap;
+        margin: 0 0 0 auto;
+
+        @media screen and (max-width: 1024px) {
+            padding-left: 0;
+        }
+        @media screen and (max-width: 992px) {
+            width: 100%;
+            flex-direction: column;
+            padding: 0;
+            box-shadow: 4px 5px 4px 1px #4e4e4e;
+            display: none;
+            opacity: 0;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            transform: translateY(-150%);
+            transition: transform .4s;
+
+            &:focus {
+                display: flex;
+            }
+        }
+    }
+    .nav_active {
+        @media screen and (max-width: 992px) {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .nav_item {
+        background-color: #c7c7c7;
+        transition: background 0.3s ease-in-out;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+            @media screen and (max-width: 992px) {
+            margin-right: 0;
+            border-bottom: 2px solid #376161;
+        }
+        }
+
+           @media screen and (max-width: 992px) {
+            margin-right: 0;
+            
+        }
+    }
+
+    .nav_link {
+        text-decoration: none;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        color: #2e5d5d;
+        font-weight: bold;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        box-shadow: 4px 5px 4px 1px #4e4e4e;
+        transition: all 0.3s ease-in-out;
+        font-size: 1rem;
+
+        &:hover, &.active, &:focus {
+            box-shadow: none;
+            background-color: #b2b2b2;
+        }
+        
+        &.active {
+            background-color: #fae79a;
+            pointer-events: none;
+        }
+
+        &:hover:after {
+            width: 50%;
+        }
+
+        @media screen and (max-width: 1200px) {
+            font-size: 0.8rem;
+        }
+
+        @media screen and (max-width: 1010px) {
+            font-size: 0.7rem;
+        }
+        @media screen and (max-width: 991px) {
+            box-shadow: none;
+            text-align: center;
+            font-size: 1rem;
+
+        }
+
+
+    }
+
+
+    .menu {
+        position: absolute;
+        top: 0;
+        right: -40px;
+        height: 35px;
+        width: 35px;
+        box-shadow: 4px 5px 4px 1px #4e4e4e;
+        display: none;
+        transition: all .3s;
+        cursor: pointer;
+        border: none;
+        padding: 0;
+        background: transparent;
+
+        @media screen and (max-width: 992px) {
+            display: block;
+        }
+
+        path {
+            fill: #fae79a;
+            stroke: transparent;
+            transition: all .3s;
+        }
+
+
+        &:hover, &:focus {
+            box-shadow: none;
+            width: 36px;
+            top: -1px;
+            outline: none;
+            path {
+                fill: #9b4d4d;
+            }
+        }
+
+    }
+
+    .phone_link {
+        display: none;
+        color: #fff;
+        padding-left: 40px;
+        align-items: center;
+        margin-right: auto;
+        margin-left: 30px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        font-family: Arial;
+        position: relative;
+        transition: color .3s;
+
+        @media screen and (max-width: 992px) {
+            display: flex;
+            margin: 0 15px 0 30px;
+        }
+        @media screen and (max-width: 767px) {
+            margin-right: auto;
+        }
+        @media screen and (max-width: 475px) {
+                margin-left: 15px;
+        }
+        @media screen and (max-width: 400px) {
+            padding-left: 0;
+            font-size: 0.9rem;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url(../../assets/img/icon__phone.png) center center no-repeat;
+            background-size: contain;
+            width: 30px;
+            height: 100%;
+
+            @media screen and (max-width: 400px) {
+                display: none;
+            }
+        }
+
+        &:hover, &:focus {
+            color: #22418a;
+            outline: none;
+        }
+
+    }
+
+    .email_link {
+        display: none;
+        @media screen and (max-width: 992px) {
+            display: flex;
+            margin: 0 15px 0 30px;
+            padding-left: 60px;
+        }
+          @media screen and (max-width: 767px) {
+            display: none;
+        }
+        &:before {
+            background: url(../../assets/img/icon__emal.png) center center no-repeat;
+            background-size: cover;
+            width: 42px;
+            height: 84%;
+            @media screen and (max-width: 400px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.top-bar_fixed {
+    position: fixed;
+    top: -100%;
+    transform: translateY(100%);
+    transition: transform .3s .1s;
+}
+
+address {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+}
